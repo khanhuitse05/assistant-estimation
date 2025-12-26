@@ -7,64 +7,53 @@ A comprehensive toolkit for generating consistent feature breakdowns, estimates,
 This pack provides:
 
 - **Guidelines** for consistent estimation and breakdown methodologies
-- **Templates** ready to fill for feature breakdowns, estimations, and user stories
-- **Prompts** including system prompts and sample inputs/outputs
+- **System prompt** for configuring AI assistants to generate consistent estimation outputs
+- **Sample outputs** demonstrating expected formats and structure
 - **Best practices** for agile estimation and story writing
 
 ## Project Structure
 
 ```text
 assistant-estimation/
-├── guidelines/          # Methodology and rules
-│   ├── breakdown-rules.md      # How to decompose features into tasks
-│   ├── estimation-method.md    # How to size work and apply buffers
-│   └── story-format.md         # User story and AC guidance
-├── templates/           # Ready-to-fill templates
-│   ├── feature-breakdown-template.md
-│   ├── estimation-template.md
-│   └── story-template.md
-├── prompts/             # AI assistant prompts and examples
-│   ├── system-prompt.md
-│   ├── sample-inputs/   # Example requirements
-│   └── sample-outputs/  # Example outputs
-└── README.md           # This file
+├── guidelines-estimation.md   # Methodology and rules (breakdown, estimation, story format)
+├── system-prompt.md           # AI assistant system prompt for estimation tasks
+├── sample-outputs.md          # Example estimation outputs and formats
+└── README.md                  # This file
 ```
 
 ## Quick Start
 
-1. **Read the guidelines** in `guidelines/` to understand the methodology
-2. **Review sample inputs** in `prompts/sample-inputs/` to see example requirements
-3. **Check sample outputs** in `prompts/sample-outputs/` to see expected formats
-4. **Use the system prompt** (`prompts/system-prompt.md`) with your AI assistant
-5. **Fill templates** from `templates/` with your breakdowns and estimates
-
-For detailed step-by-step instructions, see [USAGE.md](USAGE.md).
+1. **Read the guidelines** (`guidelines-estimation.md`) to understand the methodology for breakdown, estimation, and story writing
+2. **Review sample outputs** (`sample-outputs.md`) to see expected estimation formats and examples
+3. **Use the system prompt** (`system-prompt.md`) with your AI assistant for consistent estimation outputs
+4. **Follow the workflow** outlined in the system prompt: wait for requirements → clarify scope → breakdown → estimate → write stories
 
 ## Key Concepts
 
 ### Estimation Units
 
-- **Person-Day (PD)**: 6 focused hours of work
-- **Confidence Levels**: High (≥70% knowns), Medium (some unknowns), Low (many unknowns)
-- **Risk Buffers**: Low +10%, Medium +20%, High +35%
+- **Person-Day (PD)**: 8 hours per day of work
+- **Platform/Type**: Mobile, Web, API, AI, Design, Admin ...
+- **Task Complexity**: Low, Medium, High, Very High
 
 ### Breakdown Hierarchy
 
-- **Feature**: User-facing capability or major service area
-- **Epic/Story**: Coherent slice delivering value; sprint-sized
+- **Feature/Module**: User-facing capability or major service area
+- **Story**: Coherent slice delivering value; sprint-sized
 - **Task**: Single-discipline unit (Mobile, FE, BE, QA, Ops) ideally ≤2 PD
 
 ### Output Formats
 
-All outputs use concise, action-oriented language with tables for clarity. See `prompts/sample-outputs/` for complete examples.
+All outputs use concise, action-oriented language with hierarchical tables for clarity. See `sample-outputs.md` for complete examples.
 
 ## Usage Workflow
 
-1. **Input**: Provide product requirements (see `prompts/sample-inputs/` for format)
-2. **Breakdown**: Decompose features → epics → stories → tasks using `templates/feature-breakdown-template.md`
-3. **Estimation**: Size tasks and apply buffers using `templates/estimation-template.md`
-4. **Stories**: Write user stories with AC using `templates/story-template.md`
-5. **Review**: Capture assumptions, dependencies, risks, and critical path
+1. **Input**: Provide product requirements to your AI assistant
+2. **System Prompt**: Use `system-prompt.md` to configure your AI assistant for estimation tasks
+3. **Breakdown**: Decompose features → epics → stories → tasks following `guidelines-estimation.md`
+4. **Estimation**: Size tasks and apply buffers using the hierarchical table format (see `sample-outputs.md`)
+5. **Stories**: Write user stories with AC following the format in `guidelines-estimation.md`
+6. **Review**: Capture assumptions, dependencies, risks, and critical path
 
 ## Best Practices
 
@@ -77,4 +66,4 @@ All outputs use concise, action-oriented language with tables for clarity. See `
 
 ## Examples
 
-See `prompts/sample-inputs/payment-app-requirement.md` for a complete example requirement, and `prompts/sample-outputs/` for corresponding breakdowns, estimates, and stories.
+See `sample-outputs.md` for a complete example estimation output including feature breakdown, effort estimates, and user stories for a mobile payment application.
